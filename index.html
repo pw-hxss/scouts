@@ -1,0 +1,31 @@
+<script>
+document.addEventListener("keydown", function(event) {
+  event.preventDefault();
+});
+
+document.addEventListener("keypress", function(event) {
+  event.preventDefault();
+});
+
+document.addEventListener("keyup", function(event) {
+  event.preventDefault();
+});
+
+history.pushState(null, null, location.href);
+window.onpopstate = function() {
+    history.go(1);
+};
+
+/*
+let devtools = /./;
+devtools.toString = function() {
+  this.opened = true;
+  window.open("https://www.google.com");
+  return '';
+};
+
+console.log('%c', devtools);
+*/
+</script>
+<body>
+we have detected unusual traffic from your device <br>please enter the folling text in the field "J6f#Ts" <br><input type=text id="demo">
