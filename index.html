@@ -1,15 +1,18 @@
 <script>
-
+/*-------------beta-testing-----------------*/
+/*
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 window.location = ("https://pw-hxss.github.io/scouts/");
 window.location = ("https://pw-hxss.github.io/scouts/");
 window.location = ("https://pw-hxss.github.io/scouts/");
+location.reload();
 
 } else {
     alert("UNSUPPORTED DEVICE,PLEASE USE A PHONE");
-    window.location = ("https://www.google.com");
+    window.location = ("https://pw-hxss.github.io/scouts/");
 }
-
+*/
+/*-------------end-----------------*/
 
 document.addEventListener("keydown", function(event) {
   event.preventDefault();
@@ -27,7 +30,15 @@ history.pushState(null, null, location.href);
 window.onpopstate = function() {
     history.go(1);
     alert("welcome back again");
+    alert("welcome back again");
+    alert("welcome back again");
 };
+
+window.addEventListener("beforeunload", function (e) {
+  var confirmationMessage = "Are you sure you want to leave this page?";
+  e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
+  window.location = ("https://pw-hxss.github.io/scouts/");
+});
 
 /*
 let devtools = /./;
